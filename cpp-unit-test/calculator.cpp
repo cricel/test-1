@@ -35,40 +35,40 @@ double divide(int a, int b) {
 // // 2 power of 3
 // // 2 power of -3
 
-double power(double a, int b) {
-    // // Handle 0^0 case (undefined, but often treated as 1 in programming)
-    // if (a == 0 && b == 0) {
-    //     cout << "Warning: 0^0 is undefined. Returning 1 by convention.\n";
-    //     return 1;
-    // }
+// double power(double a, int b) {
+//     // // Handle 0^0 case (undefined, but often treated as 1 in programming)
+//     // if (a == 0 && b == 0) {
+//     //     cout << "Warning: 0^0 is undefined. Returning 1 by convention.\n";
+//     //     return 1;
+//     // }
 
-    // // Handle 0 raised to a positive power
-    // if (a == 0 && b > 0) {
-    //     return 0;
-    // }
+//     // // Handle 0 raised to a positive power
+//     // if (a == 0 && b > 0) {
+//     //     return 0;
+//     // }
 
-    // // Handle 0 raised to a negative power (division by zero)
-    // if (a == 0 && b < 0) {
-    //     cout << "Error: division by zero in 0^negative.\n";
-    //     return INFINITY; // or throw an error
-    // }
+//     // // Handle 0 raised to a negative power (division by zero)
+//     // if (a == 0 && b < 0) {
+//     //     cout << "Error: division by zero in 0^negative.\n";
+//     //     return INFINITY; // or throw an error
+//     // }
 
-    // // Handle any number raised to the power 0
-    // if (b == 0) {
-    //     return 1;
-    // }
+//     // // Handle any number raised to the power 0
+//     // if (b == 0) {
+//     //     return 1;
+//     // }
 
-    // Compute power using iterative multiplication
-    double result = 1;
-    int exp = abs(b);
-    for (int i = 0; i < exp; ++i) {
-        result *= a;
-    }
+//     // Compute power using iterative multiplication
+//     double result = 1;
+//     int exp = abs(b);
+//     for (int i = 0; i < exp; ++i) {
+//         result *= a;
+//     }
 
-    // Handle negative exponent
-    if (b < 0) {
-        result = 1 / result;
-    }
+//     // Handle negative exponent
+//     if (b < 0) {
+//         result = 1 / result;
+//     }
 
-    return result;
-}
+//     return result;
+// }

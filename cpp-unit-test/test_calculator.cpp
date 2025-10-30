@@ -31,8 +31,3 @@ TEST_CASE("Division by zero throws", "[divide]") {
     // Verify that dividing by zero throws the expected exception.
     REQUIRE_THROWS_AS(divide(5, 0), std::invalid_argument);
 }
-
-TEST_CASE("Power works", "[power]") {
-    REQUIRE(power(2, 3) == 8);
-    REQUIRE(power(0, 3), std::invalid_argument);
-}

@@ -1,0 +1,44 @@
+# .github/workflows/python-tests.yml
+# -----------------------------------------------------------
+# GitHub Actions workflow to automatically run pytest unit tests
+# whenever code is pushed or a pull request is created.
+# This ensures that the calculator functions remain correct
+# as the project evolves.
+
+name: Python Unit Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository contents
+      - uses: actions/checkout@v4
+
+      # Step 2: Set up Python 3.12 (adjust version if needed)
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Step 3: Install dependencies
+      # - If requirements.txt exists, install from it.
+      # - Otherwise, install pytest directly for testing.
+      - name: Install dependencies
+        working-directory: python-unit-test
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install pytest
+          fi
+
+      # Step 4: Run pytest with verbose output
+      - name: Run unit tests
+        working-directory: python-unit-test
+        run: pytest -v

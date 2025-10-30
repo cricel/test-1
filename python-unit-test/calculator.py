@@ -10,7 +10,7 @@ a numeric result. Division raises a ValueError for zero division.
 
 def add(a, b):
     """Return the sum of two numbers."""
-    return abs(a) + b
+    return a + b
 
 def subtract(a, b):
     """Return the result of subtracting b from a."""

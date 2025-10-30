@@ -155,7 +155,7 @@ namespace Catch {
 
         } // namespace Detail
     } // namespace Benchmark
-} // namespace Catch
+} // namespace Catch 
 
 
 // Adapted from donated nonius code.
